@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dnt.com.androidbestpractices">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".AndroidBestPracticesApplication"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tabbar.TabBarActivity"
+            android:label="@string/title_activity_tabbar" />
+        <activity
+            android:name=".navigationdrawer.NavigationDrawerActivity"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".communicate.CommunicateFragmentActivity"
+            android:label="@string/title_activity_communicate_fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".button.ButtonActivity"
+            android:label="@string/title_activity_button"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".image.LoadingImageActivity"
+            android:label="@string/title_activity_loading_image"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".pager.adaperstate.PagerAdapterActivity" />
+        <activity android:name=".ads.admob.AdmobActivity"></activity>
+    </application>
+
+</manifest>

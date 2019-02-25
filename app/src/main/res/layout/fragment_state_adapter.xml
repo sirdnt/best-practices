@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dnt.com.androidbestpractices.pager.adaperstate.StateAdapterFragment">
+
+    <ImageView
+        android:scaleType="center"
+        android:background="@color/primary_text"
+        android:id="@+id/fsa_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</FrameLayout>
