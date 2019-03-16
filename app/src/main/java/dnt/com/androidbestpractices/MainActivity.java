@@ -21,6 +21,7 @@ import dnt.com.androidbestpractices.communicate.CommunicateFragmentActivity;
 import dnt.com.androidbestpractices.image.LoadingImageActivity;
 import dnt.com.androidbestpractices.navigationdrawer.NavigationDrawerActivity;
 import dnt.com.androidbestpractices.pager.adaperstate.PagerAdapterActivity;
+import dnt.com.androidbestpractices.setting.SettingsActivity;
 import dnt.com.androidbestpractices.tabbar.TabBarActivity;
 import lombok.Data;
 import lombok.Getter;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         listActivities.add(new ActivityInformation(LoadingImageActivity.class,"Loading image button","Showing loading image using animation"));
         listActivities.add(new ActivityInformation(PagerAdapterActivity.class,"PagerAdapter","Describe how to use pager adapter"));
         listActivities.add(new ActivityInformation(AdmobActivity.class,"Admob ads","Describe how to integrate admob"));
+        listActivities.add(new ActivityInformation(SettingsActivity.class, "Settings fragment", "Describe how to add a setting activity using fragment setting"));
     }
 
     //region activity life cycle
