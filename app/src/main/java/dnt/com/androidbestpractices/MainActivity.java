@@ -18,6 +18,7 @@ import butterknife.ButterKnife;
 import dnt.com.androidbestpractices.ads.admob.AdmobActivity;
 import dnt.com.androidbestpractices.button.ButtonActivity;
 import dnt.com.androidbestpractices.communicate.CommunicateFragmentActivity;
+import dnt.com.androidbestpractices.filter.FilterActivity;
 import dnt.com.androidbestpractices.image.LoadingImageActivity;
 import dnt.com.androidbestpractices.navigationdrawer.NavigationDrawerActivity;
 import dnt.com.androidbestpractices.pager.adaperstate.PagerAdapterActivity;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void generateData() {
         listActivities = new ArrayList<>();
+        listActivities.add(new ActivityInformation(FilterActivity.class, "Filterable RecyclerView", "Describe how to implement filter with RecyclerView"));
         listActivities.add(new ActivityInformation(TabBarActivity.class, "Tab bar", "Sample for tab bar"));
         listActivities.add(new ActivityInformation(NavigationDrawerActivity.class, "Navigation drawer", "Sample for navigation drawer design principle"));
         listActivities.add(new ActivityInformation(CommunicateFragmentActivity.class, "Communicate activity and fragment", "This describe how to communicate between activity and fragments"));
@@ -101,9 +103,7 @@ class MainAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         ActivityInformation activityInformation = this.listActivities.get(position);
-        holder.getTitle().setText(activityInformation.getTitle());
-        holder.getSubtitle().setText(activityInformation.getSubtitle());
-        holder.setCurrentActivityInformation(activityInformation);
+        holder.bind(activityInformation);
     }
 
     @Override
@@ -135,6 +135,12 @@ class ViewHolder extends RecyclerView.ViewHolder {
                 itemView.getContext().startActivity(new Intent(itemView.getContext(), currentActivityInformation.getActivityClass()));
             }
         });
+    }
+
+    public void bind(ActivityInformation activityInformation) {
+        setCurrentActivityInformation(activityInformation);
+        getTitle().setText(activityInformation.getTitle());
+        getSubtitle().setText(activityInformation.getSubtitle());
     }
 
 }
