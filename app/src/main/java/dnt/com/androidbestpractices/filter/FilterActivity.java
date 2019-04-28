@@ -35,7 +35,6 @@ public class FilterActivity extends AppCompatActivity implements ContactsAdapter
 
     private static final String TAG = FilterActivity.class.getSimpleName();
 
-    private RecyclerView mRecycleView;
     private List<Contact> mContactList;
     private ContactsAdapter mContactsAdapter;
 
@@ -48,19 +47,20 @@ public class FilterActivity extends AppCompatActivity implements ContactsAdapter
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Contact");
 
-        mRecycleView = findViewById(R.id.filterable_recycler_view);
+        RecyclerView recycleView = findViewById(R.id.filterable_recycler_view);
         mContactList = new ArrayList<>();
         mContactsAdapter = new ContactsAdapter(this, mContactList, this);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        mRecycleView.setLayoutManager(layoutManager);
-        mRecycleView.setItemAnimator(new DefaultItemAnimator());
-        mRecycleView.setAdapter(mContactsAdapter);
+        recycleView.setLayoutManager(layoutManager);
+        recycleView.setItemAnimator(new DefaultItemAnimator());
+        recycleView.setAdapter(mContactsAdapter);
 
         // white background notification bar
-        whiteNotificationBar(mRecycleView);
+        //whiteNotificationBar(recycleView);
 
         fetchContacts();
     }
@@ -122,8 +122,14 @@ public class FilterActivity extends AppCompatActivity implements ContactsAdapter
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_search) {
-            return true;
+        switch (id) {
+            case R.id.action_search:
+                return true;
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
