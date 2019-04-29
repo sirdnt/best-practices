@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intro.IntroActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/intro_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="64dp"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@null"
+        android:onClick="buttonSkipSelected"
+        android:text="@string/btn_skip"
+        android:textColor="@color/icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_skip"
+        app:layout_constraintRight_toLeftOf="@id/btn_next"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <View
+            android:id="@+id/dot_1"
+            android:layout_width="@dimen/dot_size"
+            android:layout_height="@dimen/dot_size"
+            android:layout_margin="@dimen/dot_margin"
+            android:background="@color/icons" />
+
+        <View
+            android:id="@+id/dot_2"
+            android:layout_width="@dimen/dot_size"
+            android:layout_height="@dimen/dot_size"
+            android:layout_margin="@dimen/dot_margin"
+            android:background="@color/icons" />
+
+        <View
+            android:id="@+id/dot_3"
+            android:layout_width="@dimen/dot_size"
+            android:layout_height="@dimen/dot_size"
+            android:layout_margin="@dimen/dot_margin"
+            android:background="@color/icons" />
+
+        <View
+            android:id="@+id/dot_4"
+            android:layout_width="@dimen/dot_size"
+            android:layout_height="@dimen/dot_size"
+            android:layout_margin="@dimen/dot_margin"
+            android:background="@color/icons" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="0dp"
+        android:background="@null"
+        android:onClick="buttonNextSelected"
+        android:text="@string/btn_next"
+        android:textColor="@color/icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+</android.support.constraint.ConstraintLayout>

@@ -92,4 +92,13 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="menu_search">Search</string>
     <string name="search_hint">Hint</string>
+
+    <!-- intro screen -->
+    <string name="btn_next">NEXT</string>
+    <string name="btn_skip">SKIP</string>
+    <string name="btn_got_it">GOT IT</string>
+    <string name="slide_content_1">Find new friends around you</string>
+    <string name="slide_content_2">Chat with friends</string>
+    <string name="slide_content_3">Share your moments</string>
+    <string name="slide_content_4">Everything safe in the cloud</string>
 </resources>

@@ -8,4 +8,9 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
+
+    <color name="intro_screen_bg_1">#E53935</color>
+    <color name="intro_screen_bg_2">#43A047</color>
+    <color name="intro_screen_bg_3">#FFB300</color>
+    <color name="intro_screen_bg_4">#00ACC1</color>
 </resources>
