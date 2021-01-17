@@ -1,7 +1,6 @@
 package dnt.com.androidbestpractices.intro;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +13,7 @@ import android.widget.Button;
 import java.util.Arrays;
 
 import dnt.com.androidbestpractices.R;
+import lombok.NonNull;
 
 public class IntroActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 

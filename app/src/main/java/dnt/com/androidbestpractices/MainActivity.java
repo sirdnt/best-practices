@@ -16,10 +16,13 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import dnt.com.androidbestpractices.ads.admob.AdmobActivity;
+import dnt.com.androidbestpractices.androidx.databinding.DataBindingActivity;
 import dnt.com.androidbestpractices.button.ButtonActivity;
 import dnt.com.androidbestpractices.communicate.CommunicateFragmentActivity;
 import dnt.com.androidbestpractices.filter.FilterActivity;
 import dnt.com.androidbestpractices.image.LoadingImageActivity;
+import dnt.com.androidbestpractices.intent.IntentActivity;
+import dnt.com.androidbestpractices.intro.IntroActivity;
 import dnt.com.androidbestpractices.navigationdrawer.NavigationDrawerActivity;
 import dnt.com.androidbestpractices.pager.adaperstate.PagerAdapterActivity;
 import dnt.com.androidbestpractices.setting.SettingsActivity;
@@ -39,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void generateData() {
         listActivities = new ArrayList<>();
+        listActivities.add(new ActivityInformation(IntroActivity.class, "Intro activity", "Describe how app intro showing"));
+        listActivities.add(new ActivityInformation(IntentActivity.class, "Intent activity", "Describe how to use implicit and explicit intents"));
         listActivities.add(new ActivityInformation(FilterActivity.class, "Filterable RecyclerView", "Describe how to implement filter with RecyclerView"));
+        listActivities.add(new ActivityInformation(DataBindingActivity.class, "AndroidX data binding","Describe data binding"));
         listActivities.add(new ActivityInformation(TabBarActivity.class, "Tab bar", "Sample for tab bar"));
         listActivities.add(new ActivityInformation(NavigationDrawerActivity.class, "Navigation drawer", "Sample for navigation drawer design principle"));
         listActivities.add(new ActivityInformation(CommunicateFragmentActivity.class, "Communicate activity and fragment", "This describe how to communicate between activity and fragments"));
